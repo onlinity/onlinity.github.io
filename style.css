@@ -23,6 +23,7 @@ header img{
 
 div.gallery {
     border: 1px solid #ccc;
+    margin-top: 10px;
   }
   
 div.gallery:hover {
