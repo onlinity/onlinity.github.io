@@ -40,6 +40,19 @@ div.desc {
     text-align: center;
 }
 
+.new{
+    background-color: rgb(185, 80, 80);
+    color: white;
+}
+
+.new::after{
+    content: 'NEW!';
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 a{
     text-decoration: none;
     color: black;
