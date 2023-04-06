@@ -3,25 +3,20 @@
 }
 
 body{
-    background: url(background.jpg) no-repeat center fixed;
-    background-size: cover;
-}
-
-.bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -5;
+    overflow-x: hidden;
+    display: block;
     height: 100vh;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.75);
+    overflow-y: hidden;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    font-size: 60px;
+:root{
+    --blue: #4654A3;
+    --red: #7D1F1F;
+    --green: #5E9E65;
+    --beige: #CACF82;
 }
+
+
 
 header{
     display: flex;
@@ -29,6 +24,8 @@ header{
     align-items: center;
     align-self: center;
     margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 header img{
@@ -36,82 +33,30 @@ header img{
 }
 
 
-div.gallery {
-    border: 1px solid #ccc;
-    margin-top: 10px;
-  }
-  
-div.gallery:hover {
-    border: 1px solid #777;
-}
-  
-div.gallery img{
-    width: 100%;
-    height: auto;
-}
-  
-div.desc {
-    padding: 15px;
-    text-align: center;
-    background-color: white;
-}
-
-.desc.new{
-    background-color: rgb(185, 80, 80);
-    color: white;
-}
-
-.new::after{
-    content: 'NEW!';
-    color: white;
-    font-size: large;
+.message{
+    color: var(--red);
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
-    margin-left: 20px;
+    margin: auto;
+    width: 70%;
+    height: 50vh;
+    justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-* {
-    box-sizing: border-box;
-}
-  
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-  
-@media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
+@media (width < 400px){
+    .message{
+        width: 90%;
     }
 }
-  
-@media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-}
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-
-
 
 
 footer{
     width: 100%;
     text-align: center;
     padding: 30px 0;
+    position: absolute;
+    bottom: 0;
 }
 
 footer h4{
@@ -129,8 +74,13 @@ footer p{
 }
 
 .media .fa, .fa-solid{
-    color: #3a7ed2;
+    color: var(--blue);
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.media .fa:hover, .fa-solid:hover{
+    color: var(--beige);
 }
